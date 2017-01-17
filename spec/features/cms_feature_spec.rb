@@ -1,7 +1,10 @@
-context 'job have been added' do
+require 'rails_helper'
+
+feature 'job have been added' do
+
   before do
     Job.create(title: 'junior dev', description: 'we need someone to create a CMS for our job system',
-    permanent?: true, category: '', keywords: '')
+    permanent: true)
   end
 
   scenario 'display jobs' do
