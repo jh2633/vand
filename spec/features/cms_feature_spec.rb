@@ -1,5 +1,14 @@
 require 'rails_helper'
 
+
+feature 'a message indicating there are no jobs posted' do
+
+  scenario 'display blank page' do
+    visit '/jobs'
+    expect(page).to have_content('No job posted')
+  end
+end
+
 feature 'job have been added' do
 
   before do
